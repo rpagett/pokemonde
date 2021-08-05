@@ -1,0 +1,28 @@
+<section class="text-center">
+  <h2
+    class="text-4xl font-extrabold tracking-widest text-transparent bg-clip-text bg-gradient-to-r from-primary-200 to-success-800"
+  >
+    {{t 'index.headline'}}
+  </h2>
+  <h3 class="mt-4 text-2xl text-secondary-800">
+    {{t 'index.show_you'}}
+  </h3>
+</section>
+<section
+  class="flex-col w-full max-w-screen-md p-8 mx-auto mt-8 space-y-6 bg-gray-100 rounded-lg shadow-lg"
+>
+  <p class="text-xl font-bold">
+    {{t 'index.confession.headline'}}
+  </p>
+  <p>
+    {{t
+      'index.confession.explanation'
+      count=(format-number @model.count)
+      htmlSafe=true
+    }}
+  </p>
+  <Buttons::Success @classes="w-2/3 p-4 mx-auto text-xl">
+    {{t 'index.check_them_out'}}
+    <Icons::CaretRight class="w-6 h-6 fill-current" />
+  </Buttons::Success>
+</section>

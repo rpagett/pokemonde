@@ -1,11 +1,22 @@
-'use strict';
+'use strict'
 
-const EmberApp = require('ember-cli/lib/broccoli/ember-app');
+const EmberApp = require( 'ember-cli/lib/broccoli/ember-app' )
 
-module.exports = function (defaults) {
-  let app = new EmberApp(defaults, {
-    // Add options here
-  });
+module.exports = function ( defaults ) {
+  let app = new EmberApp( defaults, {
+    postcssOptions: {
+      compile: {
+        enabled: true,
+        cacheInclude: [ /.*\.hbs$/, /.*\.css$/, /.*\.html/ ],
+        plugins: [
+          require( 'autoprefixer' ),
+          // require( 'postcss-import' ),
+          require( 'tailwindcss' )( './tailwind.config.js' ), // If you have a Tailwind config file.
+        ],
+      },
+    },
+    liveReload: true
+  } )
 
   // Use `app.import` to add additional libraries to the generated
   // output files.
@@ -20,5 +31,5 @@ module.exports = function (defaults) {
   // please specify an object with the list of modules as keys
   // along with the exports of each module as its value.
 
-  return app.toTree();
-};
+  return app.toTree()
+}

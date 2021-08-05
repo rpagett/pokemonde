@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
+
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Pokemonde</title>
+    <title>Poké-monde</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -14,7 +15,8 @@
 
     {{content-for "head-footer"}}
   </head>
-  <body>
+
+  <body class="flex flex-col w-full bg-primary-100">
     {{content-for "body"}}
 
     <script src="{{rootURL}}assets/vendor.js"></script>
@@ -22,4 +24,5 @@
 
     {{content-for "body-footer"}}
   </body>
+
 </html>

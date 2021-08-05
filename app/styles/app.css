@@ -1,0 +1,27 @@
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+@import "ember-power-select";
+
+.ember-power-select-trigger,
+.ember-power-select-trigger--active {
+    min-width: 10rem;
+}
+
+.ember-basic-dropdown-content-wormhole-origin {
+    margin: 0;
+    width: 0;
+    display: none;
+}
+
+.ember-basic-dropdown-content {
+    /* margin-left: 1rem; */
+}
+
+html,body {
+    min-height: 100vh;
+    max-height: 100vh;
+    height: 100vh;
+    overscroll-behavior: none;
+}

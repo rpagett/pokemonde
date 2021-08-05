@@ -1,0 +1,13 @@
+<div class="flex flex-row flex-wrap justify-end space-x-4">
+  <label for="language">
+    {{t 'language'}}
+  </label>
+  <PowerSelect
+    id="language"
+    @selected={{this.selectedLanguage}}
+    @options={{this.languages}}
+    @onChange={{this.setLocale}} as |name|
+  >
+    {{name}}
+  </PowerSelect>
+</div>

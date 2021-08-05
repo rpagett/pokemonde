@@ -1,0 +1,8 @@
+language: "Langue:"
+
+index:
+    headline: Mes Pokémans
+    show_you: laisse moi te les montrer.
+    confession:
+        headline: J'ai une confession.
+        explanation: En fait, je n'aime pas trop les Pokémon. Je n'ai pas joué aux jeux depuis que je suis enfant et je ne suis pas sûr d'avoir la patience d'en apprendre plus de 151. Mais comme j'en ai <span class="font-bold text-lg">{count}</span>, je suppose que je vais vous montrer.
