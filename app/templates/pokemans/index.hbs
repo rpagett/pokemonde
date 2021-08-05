@@ -1,1 +1,41 @@
-Hi
+<section
+  class="grid w-full max-w-screen-xl grid-cols-2 gap-8 mx-auto mt-8 md:grid-cols-4"
+>
+  {{#each @model.results as |pokemon|}}
+    <LinkTo @route="pokemans.detail" @model={{extract-id pokemon.url}}>
+      <Buttons::Primary @classes="p-3 w-full shadow justify-center">
+        {{capitalize pokemon.name}}
+      </Buttons::Primary>
+    </LinkTo>
+  {{/each}}
+  {{#if this.showPreviousButton}}
+    <LinkTo
+      @route="pokemans"
+      @query={{hash start=this.previousOffset}}
+      class="col-start-1 md:col-span-2"
+    >
+      <Buttons::Secondary @classes="w-full p-4 px-8 shadow">
+        <Icons::CaretRight class="w-6 h-6 rotate-180" />
+        <span class="flex-1 text-center">
+          {{t 'previous'}}
+        </span>
+      </Buttons::Secondary>
+    </LinkTo>
+  {{else}}
+    <div class="col-start-1 md:col-span-2"></div>
+  {{/if}}
+  {{#if this.showNextButton}}
+    <LinkTo
+      @route="pokemans"
+      @query={{hash start=this.nextOffset}}
+      class="md:col-span-2"
+    >
+      <Buttons::Success @classes="w-full p-4 px-8 shadow">
+        <span class="flex-1 text-center">
+          {{t 'next'}}
+        </span>
+        <Icons::CaretRight class="w-6 h-6" />
+      </Buttons::Success>
+    </LinkTo>
+  {{/if}}
+</section>

@@ -1,4 +1,6 @@
-language: "Język:"
+language: "Język"
+previous: "Poprzedni"
+next: "Następny"
 
 index:
     headline: Moje Pokémany
@@ -6,3 +8,14 @@ index:
     confession:
         headline: Mam spowiedź.
         explanation: Właściwie nie lubię tak bardzo Pokémonów. Nie grałem w gry od dzieciństwa i nie jestem pewien, czy mam cierpliwość, aby nauczyć się więcej niż 151. Ale ponieważ mam <span class="text-lg font-bold">{count}</span> z nich, chyba ci pokażę.
+    check_them_out: Sprawdź je!
+
+detail:
+    back_to_list: Powrót do Listy
+    add_favorite: Dodaj do ulubionych
+    is_favorite: Faworyt
+
+stats:
+    height: Wysokość
+    weight: Waga
+    type: Rodzaj

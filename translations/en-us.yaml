@@ -1,4 +1,6 @@
-language: "Language:"
+language: "Language"
+previous: "Previous"
+next: "Next"
 
 index:
     headline: My Pokémans
@@ -7,3 +9,13 @@ index:
         headline: I have a confession.
         explanation: I don't actually like Pokémon that much. I haven't played the games since I was a kid and I'm not sure I have the patience to learn any more than 151. But since I have <span class="text-lg font-bold">{count}</span> of them, I guess I will show you.
     check_them_out: Check them out!
+
+detail:
+    back_to_list: Back to List
+    add_favorite: Add to Favorites
+    is_favorite: Favorite
+
+stats:
+    height: Height
+    weight: Weight
+    type: Type

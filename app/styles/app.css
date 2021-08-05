@@ -25,3 +25,150 @@ html,body {
     height: 100vh;
     overscroll-behavior: none;
 }
+
+.stacked {
+    grid-area: 1/1;
+}
+
+.pokemon-normal {
+    background-image: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+}
+
+.pokemon-fighting {
+    background-image: linear-gradient(to top, #09203f 0%, #537895 100%);
+}
+
+.pokemon-flying {
+    background-image: linear-gradient(to right, #ff8177 0%, #ff867a 0%, #ff8c7f 21%, #f99185 52%, #cf556c 78%, #b12a5b 100%);
+}
+
+.pokemon-poison {
+    background-image: linear-gradient(to right, #e4afcb 0%, #b8cbb8 0%, #b8cbb8 0%, #e2c58b 30%, #c2ce9c 64%, #7edbdc 100%);
+}
+
+.pokemon-ground {
+    background-image: linear-gradient(-225deg, #69EACB 0%, #EACCF8 48%, #6654F1 100%);
+}
+
+.pokemon-rock {
+    background: linear-gradient(to bottom, rgba(255,255,255,0.15) 0%, rgba(0,0,0,0.15) 100%), radial-gradient(at top center, rgba(255,255,255,0.40) 0%, rgba(0,0,0,0.40) 120%) #989898;
+    background-blend-mode: multiply,multiply;
+}
+
+.pokemon-bug {
+    background-image: linear-gradient(to top, #c1dfc4 0%, #deecdd 100%);
+}
+
+.pokemon-ghost {
+    background-color: #DCD9D4;
+    background-image: linear-gradient(to bottom, rgba(255,255,255,0.50) 0%, rgba(0,0,0,0.50) 100%), radial-gradient(at 50% 0%, rgba(255,255,255,0.10) 0%, rgba(0,0,0,0.50) 50%);
+    background-blend-mode: soft-light,screen;
+}
+
+.pokemon-steel {
+    background-image: linear-gradient(45deg, #93a5cf 0%, #e4efe9 100%);
+}
+
+.pokemon-fire {
+    background-image: linear-gradient(to top, #ff0844 0%, #ffb199 100%);
+}
+
+.pokemon-water {
+    background-image: linear-gradient(to top, #30cfd0 0%, #330867 100%);
+    @apply text-primary-900;
+}
+
+.pokemon-grass {
+    background-image: linear-gradient(to right, #43e97b 0%, #38f9d7 100%);
+}
+
+.pokemon-electric {
+    background-image: linear-gradient(to top, #fddb92 0%, #d1fdff 100%);
+}
+
+.pokemon-psychic {
+    background-image: linear-gradient(to top, #ebc0fd 0%, #d9ded8 100%);
+}
+
+.pokemon-ice {
+    background-image: linear-gradient(to top, #a8edea 0%, #fed6e3 100%);
+}
+
+.pokemon-dragon {
+    background-image: linear-gradient(15deg, #13547a 0%, #80d0c7 100%);
+}
+
+.pokemon-dark {
+    background-image: linear-gradient(to top, #dbdcd7 0%, #dddcd7 24%, #e2c9cc 30%, #e7627d 46%, #b8235a 59%, #801357 71%, #3d1635 84%, #1c1a27 100%);
+}
+
+.pokemon-fairy {
+    background-image: linear-gradient(to right, #eea2a2 0%, #bbc1bf 19%, #57c6e1 42%, #b49fda 79%, #7ac5d8 100%);
+}
+
+.animated {
+  animation-duration: 1s;
+  animation-fill-mode: both;
+ animation-timing-function: cubic-bezier(0,1.28,0,1.27);
+  animation-iteration-count: infinite;
+}
+
+@keyframes bounce {
+  0%, 40% {
+    transform: translateY(0);
+  }
+  20% {
+    transform: translateY(-3rem);
+  }
+}
+
+.u-bounce {
+  animation: bounce 1500ms infinite;
+  /* animation-timing-function: cubic-bezier(0,1.28,0,1.27); */
+}
+
+.pokeball {
+    width: 10rem;
+    height: 10rem;
+    border-radius: 10rem;
+    border: solid .4rem black;
+    position: relative;    
+    background: linear-gradient(to bottom, #EEEEEE 0%,#FFFFFF 100%);;
+    margin: 10px auto;
+}
+
+.pokeball:before,
+.pokeball:after{
+    content: "";
+    display: block;
+}
+
+.pokeball,
+.pokeball:before,
+.pokeball:after{
+    transition: all 600ms cubic-bezier(.67,.4,.36,.75);
+}
+
+.pokeball:before {
+    width: 9.3rem;
+    height: 4.8rem;
+    border-bottom: solid .5rem black;
+    border-radius: 5rem 5rem 0 0;
+    background: linear-gradient(to bottom, #d10000 0%,#ff0000 50%);
+}
+
+.pokeball:after {
+    content: "";
+    width: 2rem;
+    height: 2rem;
+    background: linear-gradient(to bottom, #fff 0%,#ccc 100%);
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    border-radius: 50%;
+    box-shadow: 0 0 0 .2rem black,
+                0 0 0 .2rem #ddd,
+                0 0 0 .7rem black,
+                0 0 1rem .5rem rgba(0,0,0,0.4);
+}

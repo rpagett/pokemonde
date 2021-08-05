@@ -1,4 +1,6 @@
-language: "Lengua:"
+language: "Lengua"
+previous: "Previo"
+next: "Próximo"
 
 index:
     headline: Mis Pokémans
@@ -6,3 +8,14 @@ index:
     confession:
         headline: Tengo una confesión.
         explanation: En realidad, no me gustan mucho los Pokémon. No he jugado a los juegos desde que era un niño y no estoy seguro de tener la paciencia para aprender más de 151. Pero como tengo <span class="text-lg font-bold">{count}</span> de ellos, supongo que se los mostraré.
+    check_them_out: "¡Verlos!"
+
+detail:
+    back_to_list: Volver a la Lista
+    add_favorite: Agregar a los Favoritos
+    is_favorite: Favorito
+
+stats:
+    height: Talla
+    weight: Peso
+    type: Tipo

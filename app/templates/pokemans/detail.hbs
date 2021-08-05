@@ -1,0 +1,47 @@
+<img
+  src="{{@model.spriteUrl}}"
+  alt="{{capitalize @model.name}}"
+  class="relative z-50 w-64 mx-auto"
+/>
+<section class="grid grid-cols-1">
+  <div
+    class="w-full max-w-screen-md p-8 pt-16 rounded-lg shadow md:mx-auto -mt-28 text-primary-900 stacked
+      {{concat 'pokemon-' @model.primary_type}}"
+  ></div>
+  <div
+    class="relative w-full max-w-screen-md p-8 pt-24 bg-gray-300 bg-opacity-50 rounded-lg shadow text-primary-900 md:mx-auto -mt-28 stacked bg-clip-padding backdrop-filter backdrop-blur-xl"
+  >
+    <Pokecard::IndexCircle @index={{@model.game_index}} />
+    <h1 class="mt-8 text-5xl font-bold text-center">
+      {{capitalize @model.name}}
+    </h1>
+    <p
+      class="mt-2 mb-8 text-lg font-semibold tracking-wider text-center uppercase text-primary-700"
+    >
+      {{concat (t 'stats.type') ':'}}
+      {{capitalize @model.primary_type}}
+    </p>
+    <div class="grid grid-cols-2 gap-8 mt-6">
+      <Pokecard::StatBox @stat={{t 'stats.height'}} @value={{@model.height}} />
+      <Pokecard::StatBox @stat={{t 'stats.weight'}} @value={{@model.weight}} />
+    </div>
+  </div>
+</section>
+<div
+  class="grid w-full max-w-screen-md grid-cols-1 gap-4 mt-4 md:grid-cols-2 md:mx-auto"
+>
+  <LinkTo @route="pokemans">
+    <Buttons::Secondary @classes="w-full p-4 px-8 shadow">
+      <Icons::CaretRight class="w-6 h-6 rotate-180" />
+      <span class="flex-1 text-center">
+        {{t 'detail.back_to_list'}}
+      </span>
+    </Buttons::Secondary>
+  </LinkTo>
+  <Buttons::Secondary @classes="w-full p-4 px-8 shadow">
+    <Icons::Heart @empty={{true}} class="w-6 h-6" />
+    <span class="flex-1 text-center">
+      {{t 'detail.add_favorite'}}
+    </span>
+  </Buttons::Secondary>
+</div>

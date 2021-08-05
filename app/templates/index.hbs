@@ -21,8 +21,10 @@
       htmlSafe=true
     }}
   </p>
-  <Buttons::Success @classes="w-2/3 p-4 mx-auto text-xl">
-    {{t 'index.check_them_out'}}
-    <Icons::CaretRight class="w-6 h-6 fill-current" />
-  </Buttons::Success>
+  <LinkTo @route="pokemans">
+    <Buttons::Success @classes="w-2/3 p-4 mx-auto text-xl justify-between mt-6">
+      {{t 'index.check_them_out'}}
+      <Icons::CaretRight class="w-6 h-6 fill-current" />
+    </Buttons::Success>
+  </LinkTo>
 </section>
